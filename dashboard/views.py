@@ -113,14 +113,23 @@ def profile(request):
 
 
 @staff_required
-def settings(request,id):
-    user = User.objects.get(id=id)
+def settings(request):
     if request.method == 'POST':
-        user.first_name = request.POST.get('first_name')
-        user.last_name = request.POST.get('last_name')
-        user.username = request.POST.get('username')
-        user.email = request.POST.get('email')
-        user.save()
+        username = request.user.username
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        new_password = request.POST.get('new_password')
+        print(username, password)
+        if authenticate(username=username, password=password):
+            print(111)
+            user = models.User.objects.get(username=username)
+            user.first_name = first_name
+            user.last_name = last_name
+            user.email = email
+            user.set_password(new_password)
+            user.save()
         return redirect('profile')
     return render(request, 'profile/setting.html')
     
