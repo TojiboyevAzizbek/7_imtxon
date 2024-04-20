@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block content %}
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="d-flex">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-light" id="dash-daterange">
+                                                <span class="input-group-text bg-primary border-primary text-white">
+                                                    <i class="mdi mdi-calendar-range font-13"></i>
+                                                </span>
+                                            </div>
+                                            <a href="javascript: void(0);" class="btn btn-primary ms-2">
+                                                <i class="mdi mdi-autorenew"></i>
+                                            </a>
+                                            <a href="javascript: void(0);" class="btn btn-primary ms-1">
+                                                <i class="mdi mdi-filter-variant"></i>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">Dashboard</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Xodimlar</h4>
+                                        <p class="text-muted font-14">
+                              
+                                        </p>
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane active show" id="typeahead-preview" role="tabpanel">
+                                                <div class="row">
+                                                    <form method="post">
+                                                        {% csrf_token %}
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Xodimning ismi </label>
+                                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control tt-hint" data-provide="typeahead" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255);"><input type="text" class="form-control tt-input" data-provide="typeahead" id="the-basics" placeholder="Ism kiriting" name="f_name" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Nunito, sans-serif; font-size: 14.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-states"></div></div></span>
+                                                            </div>
+                                            
+                                                        </div>
+
+
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Xodimning familiyasi </label>
+                                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control tt-hint" data-provide="typeahead" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255);"><input type="text" class="form-control tt-input" data-provide="typeahead" id="the-basics" placeholder="Familiya kiriting" name="l_name" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Nunito, sans-serif; font-size: 14.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-states"></div></div></span>
+                                                            </div>
+                                            
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Xodimning statusi </label>
+                                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control tt-hint" data-provide="typeahead" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255);"><input type="text" class="form-control tt-input" data-provide="typeahead" id="the-basics" placeholder="Xodimning statusini kiriting" name="status" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Nunito, sans-serif; font-size: 14.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-states"></div></div></span>
+                                                                
+                                                            </div>
+                                            
+
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Xodimning telefon raqami </label>
+                                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="tel" class="form-control tt-hint" data-provide="typeahead" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255);"><input type="tel" class="form-control tt-input" data-provide="typeahead" id="the-basics" placeholder="Telefon raqamni kiriting" name="tel_num" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Nunito, sans-serif; font-size: 14.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-states"></div></div></span>
+                                                            </div>
+                                            
+                                                        </div>
+                                                        
+                                                        
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Xodimning telefon elektron manzili </label>
+                                                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="email" class="form-control tt-hint" data-provide="typeahead" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box padding-box rgb(255, 255, 255);"><input type="email" class="form-control tt-input" data-provide="typeahead" id="the-basics" placeholder="Email raqamni kiriting" name="email" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Nunito, sans-serif; font-size: 14.4px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-states"></div></div></span>
+                                                            </div>
+                                            
+                                                        </div>
+                                                       
+
+
+                                                        
+                                                        <button type="submit" class="btn btn-outline-success"><i class="uil-upload"></i> Yaratish</button>
+                                                    </form>
+                                                </div>
+                                                <!-- end row -->                      
+                                            </div> <!-- end preview-->
+                            
+                                        </div> <!-- end tab-content-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                
+
+            </div>
+
+{% endblock %}

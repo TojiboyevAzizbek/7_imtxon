@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-page">
+    <div class="content">
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        
+                        <h4 class="page-title">Profile </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="{% static 'images/users/avatar-1.jpg' %}" class="rounded-circle avatar-lg img-thumbnail"
+                            alt="profile-image">
+
+                            <h4 class="mb-0 mt-2">{{user.username}}</h4>
+                            
+
+
+                            <div class="text-start mt-3">
+                               
+                                <p class="text-muted mb-2 font-13"><strong>Name :</strong> <span class="ms-2">{{user.first_name}}</span></p>
+
+                                <p class="text-muted mb-2 font-13"><strong>Surname :</strong> <span class="ms-2">{{user.last_name}}</span></p>
+
+                                <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ms-2 ">{{user.email}}</span></p>
+                            </div>
+
+                            
+                        </div> <!-- end card-body -->
+                    </div> <!-- end card -->
+
+                    <!-- Messages-->
+                    <!-- end card-->
+
+                </div> <!-- end col-->
+
+                 <!-- end col -->
+            </div>
+            <!-- end row-->
+
+        </div>
+        <!-- container -->
+
+    </div>
+    <!-- content -->
+
+    <!-- Footer Start -->
+    
+    <!-- end Footer -->
+
+</div>
+{% endblock %}

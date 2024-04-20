@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+
+                        <!-- end row -->
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-3">Xodimning ma'lumotlari</h4>
+        
+                                    <div class="table-responsive">
+                                        <table class="table mb-0">
+                                        
+                                            <tbody>
+                                                <tr>
+                                                    <td><b>ID :</b></td>
+                                                    <td>{{staff.id}}</td>
+                                                </tr>
+                                            <tr>
+                                                <td><b>Ism :</b></td>
+                                                <td>{{staff.f_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Familiya :</b></td>
+                                                <td>{{staff.l_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Status :</b></td>
+                                                <td>{{staff.status}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Tel raqam :</b></td>
+                                                <td>{{staff.tel_num}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Email :</b></td>
+                                                <td>{{staff.email}}</td>
+                                            </tr>
+                                        
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- end table-responsive -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <h4 class="page-title" style="display: inline;"></h4>
+                        <a href="{% url 'staff_edit' staff.id %}" class="btn btn-outline-primary">O`zgartirish</a>
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#centermodal">O`chirish</button>
+                        <div class="modal fade" id="centermodal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myCenterModalLabel">Xodimni  o'chirmoqchimisiz? </h4>
+                                        <form method="get" action="{% url 'staff_delete' staff.id %}">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                            <input type="checkbox" class="form-check-input" id="customCheckcolor7" required>
+                                            <label for="chkb">Ha</label> <br> <br>
+                                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal" aria-hidden="true">Qaytish</button>
+                                            <button class="btn btn-danger" type="submit">O'chirish</button>
+                                        </div>
+                                        </form>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                                
+                    </div>
+                    <!-- container -->
+
+                </div>
+                <!-- content -->
+
+                
+            </div>
+{% endblock %}
